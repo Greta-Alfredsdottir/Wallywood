@@ -38,14 +38,14 @@ model Poster {
   id Int @id @default(autoincrement())
   name String
   slug String
-  description String
+  description String @db.Text
   image String
   width Int
   height Int
   price Decimal
   stock Int
   createdAt DateTime @default(now())
-  updatedAt DateTime
+  updatedAt DateTime @updatedAt
 
   cartlines Cartline[]
   userRatings userRating[]
