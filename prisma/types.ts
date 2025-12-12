@@ -19,10 +19,18 @@ export const fieldTypes: Record<string, Record<string, 'string' | 'number' | 'bo
     height: 'number',
     price: 'number',
     stock: 'number',
-    createAt: 'date',
+    createdAt: 'date',
     updatedAt: 'date'
     
   },
+genre: {
+  id: 'number',
+  title: 'string',
+  slug: 'string',
+  createdAt: 'date',
+  updatedAt: 'date',
+},
+
   userRating: {
   id: 'number',
   userId: 'number',
@@ -36,15 +44,8 @@ genrePosterRel: {
   posterId: 'number',
 },
 
-Genre: {
-  id: 'number',
-  title: 'string',
-  slug: 'string',
-  createdAt: 'date',
-  updatedAt: 'date',
-},
 
-Cartline: {
+cartline: {
   id: 'number',
   userId: 'number',
   posterId: 'number',
