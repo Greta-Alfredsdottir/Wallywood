@@ -2,6 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { userRoutes } from './routes/userRoutes.js';
 import { posterRoutes } from './routes/posterRoutes.js';
+import { genreRoutes } from './routes/genreRoutes.js';
+import { cartlineRoutes } from './routes/cartlineRoutes.js';
+import { userRatingsRoutes } from './routes/userRatingsRoutes copy.js';
+
 
 // Indlæs miljøvariabler fra .env (uden at vise logs)
 dotenv.config({ quiet: true });
@@ -21,6 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 // Brug vores user-routes under /api/users
 app.use('/api/users', userRoutes);
 app.use('/api/posters', posterRoutes);
+app.use('/api/genres', genreRoutes);
+app.use('/api/cartlines', cartlineRoutes);
+app.use('/api/userRatings', userRatingsRoutes);
 
 // Start serveren
 app.listen(port, () => {
